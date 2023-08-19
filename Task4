@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#for loop 
+for i in {2..20..2}
+do 
+  echo "Table for 2:"$i
+done
+
+#While Loop
+while true 
+do 
+  echo "this is an infinite loop"
+done
