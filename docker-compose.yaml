@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+    react:
+        build: /home/ubuntu/reactproject/GuviAssignments/reactjs-demo         
+        container_name: react_c
+        ports:
+          - "80:80"
+        stdin_open: true
+        tty: true
