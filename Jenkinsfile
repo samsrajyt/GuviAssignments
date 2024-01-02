@@ -13,7 +13,7 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: "Dev"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'jenkins-testing', url: 'https://github.com/samsrajyt/GuviAssignments']]])
                 output message: 'Git Checkout Completed'
                 output message: 'Building Docker Image'
-                sh 'docker build -t dockerhubusername/dockerhubreponame:$BUILD_NUMBER .' '
+                sh 'docker build -t dockerhubusername/dockerhubreponame:$BUILD_NUMBER .'
                 output message: 'logging in to Docker Hub'
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 output message:  'Pushing Image'
